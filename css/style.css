@@ -1,0 +1,78 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cerrar-sesion{
+    display: none;
+    width: 200px;
+    height: 50px;
+    font-size: large;
+}
+
+#cajacookies {
+  box-shadow: 0px 0px 5px 5px #808080;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 0px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 50px;
+}
+
+.inner {
+  width: 100%;
+  position: absolute;
+  padding-left: 5px;
+  font-family: verdana;
+  font-size: 12px;
+  top: 30%;
+}
+
+.inner a.ok {
+  padding: 4px;
+  color: #00ff2e;
+  text-decoration: none;
+}
+
+.inner a.info {
+  padding-left: 5px;
+  text-decoration: none;
+  color: #faff00;
+}
+
+.error {
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(185, 73, 73);
+  border: solid 2px;
+  color: rgb(255, 255, 255);
+  border-color: rgb(83, 0, 0);
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.success{
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(80, 150, 63);
+  border: solid 2px;
+  color: rgb(255, 255, 255);
+  border-color: rgb(7, 83, 0);
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.warning{
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(201, 123, 51);
+  border: solid 2px;
+  color: rgb(255, 255, 255);
+  border-color: rgb(83, 40, 0);
+  padding: 5px;
+  margin-top: 10px;
+}

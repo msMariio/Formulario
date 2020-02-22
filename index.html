@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Formulario</title>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <center>
+    <form action="#" method="POST" id="iniciarSesion">
+      <fieldset>
+        <legend>Iniciar Sesión</legend>
+        
+        <label for="emailtlf">Email o Teléfono</label> <br>
+          <input type="text" name="emailtlf" id="emailtlf"  required><br>
+        <label for="pass">Contraseña</label><br>
+          <input type="password" name="pass" id="pass" placeholder="********" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required><br><br>
+          Mostrar Contraseña<input type="checkbox"id="mostrar" onclick="mostrarContraseña(this)"><br><br>
+        <input type="submit" value="Aceptar" id="aceptar" onclick="iniciarSesion()">
+        <div id="resultado"></div>
+      </fieldset>
+    </form>
+    
+    <button class="cerrar-sesion" id="cerrarSesion" onclick="cerrarSesion()">Cerrar sesion</button>
+    <form action="#" id="registro">
+      <fieldset>
+          <legend>Registro</legend>
+          <label for="nombre">Nombre*</label><br>
+            <input type="text" name="nombre" id="nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required><br>
+          <label for="apellido">Apellido*</label><br>
+            <input type="text" name="apellido" id="apellido" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required><br>
+          <label for="emtlf">Email o Teléfono*</label><br>
+            <input type="text" name="emtlf" id="emtlf" onkeyup="emailTlfValidity()" required><br>
+          <label for="pass1">Contraseña*</label><br>
+            <input type="password" name="pass1" id="pass1" placeholder="********" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required><br>
+          <label for="pass2">Confirma contraseña*</label><br>
+            <input type="password" name="pass2" id="pass2" onkeyup="confirmaPass()" placeholder="********" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required><br>
+          <label for="fechanac">Fecha de nacimiento</label><br>
+            <input type="date" name="fechanac" id="fechanac"><br><br>
+          <div id="resultadoRegistro"></div><br><br>
+          <input type="submit" value="Registrarse" id="registrarse" onclick="registro()">
+      </fieldset>
+    </form>
+  </center>
+
+  <div id="cajacookies" style="display: block;">
+    <div class="inner">
+    <p><button onclick="ponerCookie()" class="pull-right"><i class="fa fa-times"></i> Aceptar y cerrar éste mensaje</button>
+    Éste sitio web usa cookies, si permanece aquí acepta su uso.
+    Puede leer más sobre el uso de cookies en nuestra <a href="http://politicadecookies.com">política de privacidad</a>.
+    </p>
+  </div>
+</div>  
+      <script src="js/validacion.js"></script>
+    
+  </body>
+</html>
